@@ -1,0 +1,308 @@
+$font-stack:    "Comic Sans MS", cursive, sans-serif;
+$primary-color: #ffffff;
+$cover-size: 80vw;
+$padding-size: 1.2vw;
+$margin-size: 2vw;
+$profile-size: 15vw;
+$button-size: 2.4vw;
+$pos-size: 10vw;
+$border-size: 0.3vw;
+$logo-size: 2.5vw;
+$photo-size: 14vw;
+
+body {
+  font: 100% $font-stack;
+  background-color: #bcaeaa;
+  color: #6e6360;
+
+  .cover {
+
+    border: 2px solid #91837f;
+    position: relative;
+    display: block;
+    background-color: black;
+    width: $cover-size;
+    height: $cover-size/2;
+    margin: $margin-size auto;
+    border-radius: $padding-size;
+
+    img {
+      position: absolute;
+      max-width: $cover-size;
+      max-height: $cover-size;
+      display: table-cell;
+      top: 50%;
+      left: 50%;
+      margin: auto;
+      transform: translate(-50%, -50%);
+      width: $cover-size;
+      height: auto;
+    }
+  }
+
+  .profile_pic {
+
+    float: left;
+    display: block;
+    width: $profile-size;
+    height: $profile-size;
+    position: relative;
+    top: -0.6 * $pos-size;
+    left: 1.8 * $pos-size;
+    border-radius: $padding-size;
+    background-color: black;
+    border: $border-size solid #91837f;
+
+    img {
+      position: absolute;
+      max-width: $profile-size;
+      max-height: $profile-size;
+      display: table-cell;
+      top: 50%;
+      left: 50%;
+      margin: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .name {
+    position: relative;
+    left: 20vw;
+    width: 80vw;
+    font-weight: bold;
+    font-size: 150%;
+  }
+
+  .info {
+    background-color: white;
+    border: 2px solid #91837f;
+    width: $cover-size;
+    height: auto;
+    margin: $margin-size auto;
+    border-radius: $padding-size;
+
+    .brief-info {
+      margin-top: 4*$margin-size;
+      text-align: center;
+      font-size: 150%;
+    }
+
+    .more-info {
+
+      div {
+
+        height: auto;
+        display: inline-block;
+
+        .sub-title {
+          width: 0.2*$cover-size;
+          vertical-align:top;
+          margin-left: 3*$margin-size;
+          margin-right: 2*$margin-size;
+          font-size: 130%;
+        }
+
+        .desc {
+          right: $profile-size;
+          width: 0.6*$cover-size;
+          margin-bottom: 5*$margin-size;
+        }
+
+        .divider2 {
+          display: block;
+          margin: 0.3*$margin-size 10*$margin-size 0.3*$margin-size 0;
+          border-top: 0.5*$border-size solid #91837f;
+          content: "";
+        }
+      }
+      .social-network {
+        img {
+          display: inline;
+          width: $logo-size;
+          height: $logo-size;
+          margin: $margin-size/5;
+          margin-top: 0;
+        }
+      }
+
+
+      .images {
+
+        .image {
+          position: relative;
+          display: inline-block;
+          width: $photo-size;
+          margin: $margin-size/2 $margin-size/2 0 0;
+
+          .border {
+            position: relative;
+            width: $photo-size;
+            height: $photo-size;
+            background-color: black;
+            border-radius: 5%;
+
+            img {
+              position: absolute;
+              max-width: $photo-size;
+              max-height: $photo-size;
+              display: table-cell;
+              width: $photo-size;
+              top: 50%;
+              left: 50%;
+              margin: auto;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .divider1 {
+    display: block;
+    width: auto;
+    margin: 2*$margin-size 6*$margin-size;
+    border-top: 0.8*$border-size solid #91837f;
+    content: "";
+  }
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 720px)
+{
+
+  body {
+
+    .cover {
+      width: 1.1*$cover-size;
+      height: 1.1*$cover-size/2;
+
+      img {
+        max-width: 1.1*$cover-size;
+        max-height: 1.1*$cover-size;
+        width: 1.1*$cover-size;
+      }
+    }
+
+    .profile_pic {
+
+      width: 1.1*$profile-size;
+      height: 1.1*$profile-size;
+
+      img {
+        max-width: 1.1*$profile-size;
+        max-height: 1.1*$profile-size;
+      }
+    }
+
+    .info {
+      width: 1.1*$cover-size;
+
+      .more-info {
+        div{
+          .desc {
+            width: 0.7*$cover-size;
+          }
+        }
+
+        .social-network {
+          img {
+            width: 1.5*$logo-size;
+            height: 1.5*$logo-size;
+          }
+        }
+
+        .images {
+
+          .image {
+            width: 1.2*$photo-size;
+
+            .border {
+              width: 1.2*$photo-size;
+              height: 1.2*$photo-size;
+
+              img {
+                max-width: 1.2*$photo-size;
+                max-height: 1.2*$photo-size;
+                width: 1.2*$photo-size;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  body {
+
+    .cover {
+      width: 1.1*$cover-size;
+      height: 1.1*$cover-size/2;
+
+      img {
+        max-width: 1.1*$cover-size;
+        max-height: 1.1*$cover-size;
+        width: 1.1*$cover-size;
+      }
+    }
+
+    .profile_pic {
+
+      width: 1.1*$profile-size;
+      height: 1.1*$profile-size;
+
+      img {
+        max-width: 1.1*$profile-size;
+        max-height: 1.1*$profile-size;
+      }
+    }
+
+    .info {
+      width: 1.1*$cover-size;
+
+      .more-info {
+        div{
+          .sub-title {
+            font-weight: bold;
+          }
+          .desc {
+            font-size: 90%;
+            width: 0.7*$cover-size;
+          }
+        }
+
+        .social-network {
+          img {
+            width: 1.8*$logo-size;
+            height: 1.8*$logo-size;
+          }
+        }
+
+        .images {
+
+          .image {
+            width: 1.2*$photo-size;
+
+            .border {
+              width: 1.2*$photo-size;
+              height: 1.2*$photo-size;
+
+              img {
+                max-width: 1.2*$photo-size;
+                max-height: 1.2*$photo-size;
+                width: 1.2*$photo-size;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
+

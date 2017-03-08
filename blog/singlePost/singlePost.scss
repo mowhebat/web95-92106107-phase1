@@ -1,0 +1,288 @@
+$font-stack:    "Comic Sans MS", cursive, sans-serif;
+$primary-color: #ffffff;
+$photo-size: 50vw;
+$padding-size: 2vw;
+$margin-size: 1vw;
+$profile-size: 10vw;
+$button-size: 5vw;
+
+body {
+  font: 100% $font-stack;
+  background-color: #bcaeaa;
+
+  #blog-name {
+    text-align: center;
+    font-size: 300%;
+    font-weight: bold;
+    color: #632532;
+    border-bottom: dashed #632532;
+    width: $photo-size;
+    margin: 3 * $margin-size auto;
+    padding-bottom: $padding-size;
+  }
+
+  br {
+    display: block;
+    margin: $padding-size 0;
+  }
+
+  #post {
+
+    position: relative;
+    display: table;
+    margin: auto;
+
+    .image {
+      position: relative;
+      width: $photo-size;
+      height: $photo-size;
+      background-color: black;
+
+      img {
+        position: absolute;
+        max-width: $photo-size;
+        max-height: $photo-size;
+        display: table-cell;
+        top: 50%;
+        left: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .desc {
+
+      width: $photo-size - 2 * $padding-size;
+      height: 0.68*($photo-size - 2 * $padding-size);
+      background-color: whitesmoke;
+      position: absolute;
+      top: $photo-size;
+      padding: $padding-size;
+
+      .first-info {
+
+        .author-pic {
+          width: $profile-size;
+          height: $profile-size;
+          display: inline-block;
+          position: relative;
+          background-color: black;
+          border-radius: 50%;
+          margin: 0 $margin-size;
+          overflow: hidden;
+          border: 0.15vw solid black;
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: auto;
+            transform: translate(-50%, -50%);
+            max-width: $profile-size;
+            max-height: $profile-size;
+          }
+        }
+
+        .author-name {
+          font-size: 115%;
+          position: absolute;
+          height: $profile-size;
+          line-height: $profile-size;
+          display: inline-block;
+          direction: ltr;
+        }
+
+        .date {
+          font-size: 85%;
+          position: absolute;
+          height: $profile-size;
+          line-height: $profile-size;
+          display: inline-block;
+          right: $padding-size;
+          direction: ltr;
+        }
+      }
+
+      .info-divider {
+        position: absolute;
+        top: $profile-size + $padding-size;
+        display: block;
+        width: $photo-size - 2 * $padding-size;
+        height: 5px;
+        border: 0;
+        border-top: 1px solid slategray;
+        margin: $margin-size 0;
+        padding: 0;
+        content: "";
+      }
+
+      .more-info {
+        position: absolute;
+        top: $profile-size + $padding-size + 4 * $margin-size;
+
+        .title {
+          height: 0.5*$profile-size;
+          line-height: 0.5*$profile-size;
+          font-weight: bold;
+        }
+
+        .info {
+          height: ($photo-size - 2 * $padding-size) / 2 - $profile-size - 2 * $margin-size - $button-size;
+
+          .container {
+            position: relative;
+            height: auto;
+            display: table;
+            right: $padding-size;
+          }
+
+          [type="checkbox"] {
+            position: absolute;
+            left: -9999px;
+          }
+
+          label {
+            background: #cccfcc;
+            display: block;
+            width: $button-size * 2;
+            height: $button-size / 2;
+            cursor: pointer;
+            position: absolute;
+            top: $padding-size;
+            border-radius: 10%;
+            left: $padding-size;
+          }
+
+          label:hover {
+            background-color: #b7b6b3;
+          }
+
+          label:before {
+            position: absolute;
+            content: "load more...";
+            line-height: $button-size / 2;
+            vertical-align: middle;
+            font-size: 11px;
+            right: $padding-size;
+            color: #707070;
+            font-weight: bold;
+          }
+
+          [type="checkbox"] ~ dl {
+            display: none;
+          }
+
+          [type="checkbox"]:checked ~ dl {
+            width: $photo-size - 2 * $padding-size;
+            height: ($photo-size - 2 * $padding-size) / 2;
+            background-color: whitesmoke;
+            position: absolute;
+            padding: 0 $padding-size;
+            display: block;
+          }
+
+          [type="checkbox"]:checked + label {
+            display: none;
+          }
+
+        }
+
+      }
+
+    }
+
+
+  }
+}
+
+@media only screen and (max-width: 1080px)
+{
+
+  $photo-size: 70vw;
+
+  body {
+
+    #blog-name {
+      font-size: 500%;
+      text-align: center;
+      width: $photo-size;
+    }
+
+    #post {
+
+      font-size: 120%;
+
+      .image {
+        width: $photo-size;
+        height: $photo-size;
+
+        img {
+          max-width: $photo-size;
+          max-height: $photo-size;
+        }
+      }
+
+      .desc {
+
+        width: $photo-size - 2 * $padding-size;
+        height: ($photo-size - 2 * $padding-size) / 2;
+        top: $photo-size;
+
+        .info-divider {
+          width: $photo-size - 2 * $padding-size;
+        }
+        .more-info {
+
+          .info {
+            height: ($photo-size - 2 * $padding-size) / 2 - 2 * $profile-size - 2 * $margin-size - $button-size;
+
+            label:before {
+              font-size: 70%;
+            }
+
+            [type="checkbox"]:checked ~ dl {
+              width: $photo-size - 2 * $padding-size;
+              height: ($photo-size - 2 * $padding-size) / 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px)
+{
+  $button-size: 6.5vw;
+
+  body {
+    font-size: 80%;
+
+    #blog-name {
+      font-size: 400%;
+      width: 1.5*$photo-size;
+    }
+
+    #post {
+      .desc {
+
+        height: 0.78*($photo-size - 2 * $padding-size);
+
+        .more-info {
+          .info {
+            .container {
+              label {
+                width: $button-size * 2;
+                height: $button-size / 2;
+              }
+
+              label:before {
+                font-size: 80%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

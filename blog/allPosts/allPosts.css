@@ -1,0 +1,183 @@
+body {
+  font: 80% "Comic Sans MS", cursive, sans-serif;
+  background-color: #bcaeaa; }
+  body #blog-name {
+    font-size: 300%;
+    font-weight: bold;
+    color: #632532;
+    position: relative;
+    left: 3vw;
+    border-bottom: dashed #632532;
+    width: 88vw;
+    padding: 2.4vw;
+    margin-bottom: 3vw; }
+  body br {
+    display: block;
+    margin: 1.2vw 0; }
+  body #container {
+    display: table;
+    margin: auto;
+    width: 95%; }
+    body #container .post {
+      display: inline-block;
+      height: 37.5vw;
+      margin: 1.8vw 0;
+      position: relative; }
+      body #container .post .image {
+        position: relative;
+        margin: 0.6vw;
+        width: 30vw;
+        height: 30vw;
+        background-color: black; }
+        body #container .post .image img {
+          position: absolute;
+          max-width: 30vw;
+          max-height: 30vw;
+          display: table-cell;
+          top: 50%;
+          left: 50%;
+          margin: auto;
+          transform: translate(-50%, -50%); }
+      body #container .post .desc {
+        width: 27.6vw;
+        height: 6.9vw;
+        background-color: whitesmoke;
+        position: absolute;
+        top: 30vw;
+        padding: 1.2vw;
+        margin: 0.6vw; }
+        body #container .post .desc .first-info .author-pic {
+          width: 3vw;
+          height: 3vw;
+          display: inline-block;
+          position: relative;
+          background-color: black;
+          border-radius: 50%;
+          margin: 0 0.6vw;
+          overflow: hidden;
+          border: 1vw; }
+          body #container .post .desc .first-info .author-pic img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: auto;
+            transform: translate(-50%, -50%);
+            max-width: 3vw;
+            max-height: 3vw; }
+        body #container .post .desc .first-info .author-name {
+          position: absolute;
+          height: 3vw;
+          line-height: 3vw;
+          display: inline-block;
+          direction: ltr; }
+        body #container .post .desc .first-info .date {
+          position: absolute;
+          height: 3vw;
+          line-height: 3vw;
+          display: inline-block;
+          right: 1.2vw;
+          direction: ltr; }
+        body #container .post .desc .info-divider {
+          position: absolute;
+          top: 4.2vw;
+          display: block;
+          width: 27.6vw;
+          height: 5px;
+          border: 0;
+          border-top: 1px solid slategray;
+          margin: 0.6vw 0;
+          padding: 0;
+          content: ""; }
+        body #container .post .desc .more-info {
+          position: absolute;
+          top: 5.4vw; }
+          body #container .post .desc .more-info .title {
+            font-size: 130%;
+            height: 3vw;
+            line-height: 3vw;
+            font-weight: bold; }
+
+@media only screen and (max-width: 1080px) and (min-width: 720px) {
+  body #blog-name {
+    font-size: 500%;
+    text-align: center; }
+  body #container .post {
+    height: 63vw;
+    margin: 2.4vw 1.2vw; }
+    body #container .post .image {
+      margin: 0.66vw;
+      width: 42vw;
+      height: 42vw; }
+      body #container .post .image img {
+        max-width: 42vw;
+        max-height: 42vw; }
+    body #container .post .desc {
+      width: 39.6vw;
+      height: 20.4vw;
+      top: 42vw;
+      padding: 1.2vw;
+      margin: 0.66vw; }
+      body #container .post .desc .first-info .author-pic {
+        width: 9vw;
+        height: 9vw; }
+        body #container .post .desc .first-info .author-pic img {
+          max-width: 9vw;
+          max-height: 9vw; }
+      body #container .post .desc .first-info .author-name {
+        top: -3vw;
+        right: -1.2vw;
+        position: relative;
+        direction: ltr;
+        font-size: 135%; }
+      body #container .post .desc .first-info .date {
+        font-size: 120%;
+        position: relative;
+        vertical-align: middle;
+        left: 23.8vw; }
+      body #container .post .desc .more-info {
+        font-size: 150%;
+        top: 16.5vw; }
+      body #container .post .desc .info-divider {
+        width: 39.6vw;
+        top: 13.2vw; } }
+@media only screen and (max-width: 720px) {
+  body #container .post {
+    height: 63vw;
+    margin: 2.4vw 1.2vw; }
+    body #container .post .image {
+      margin: 0.66vw;
+      width: 42vw;
+      height: 42vw; }
+      body #container .post .image img {
+        max-width: 42vw;
+        max-height: 42vw; }
+    body #container .post .desc {
+      width: 39.6vw;
+      height: 20.4vw;
+      top: 42vw;
+      padding: 1.2vw;
+      margin: 0.66vw; }
+      body #container .post .desc .first-info .author-pic {
+        width: 9vw;
+        height: 9vw; }
+        body #container .post .desc .first-info .author-pic img {
+          max-width: 9vw;
+          max-height: 9vw; }
+      body #container .post .desc .first-info .author-name {
+        top: -3vw;
+        right: -1.2vw;
+        position: relative;
+        direction: ltr;
+        font-size: 125%; }
+      body #container .post .desc .first-info .date {
+        position: relative;
+        vertical-align: middle;
+        right: -21vw; }
+      body #container .post .desc .more-info {
+        font-size: 140%;
+        top: 16.5vw; }
+      body #container .post .desc .info-divider {
+        width: 39.6vw;
+        top: 13.2vw; } }
+
+/*# sourceMappingURL=allPosts.css.map */

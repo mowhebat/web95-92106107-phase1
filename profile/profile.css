@@ -1,0 +1,178 @@
+body {
+  font: 100% "Comic Sans MS", cursive, sans-serif;
+  background-color: #bcaeaa;
+  color: #6e6360; }
+  body .cover {
+    border: 2px solid #91837f;
+    position: relative;
+    display: block;
+    background-color: black;
+    width: 80vw;
+    height: 40vw;
+    margin: 2vw auto;
+    border-radius: 1.2vw; }
+    body .cover img {
+      position: absolute;
+      max-width: 80vw;
+      max-height: 80vw;
+      display: table-cell;
+      top: 50%;
+      left: 50%;
+      margin: auto;
+      transform: translate(-50%, -50%);
+      width: 80vw;
+      height: auto; }
+  body .profile_pic {
+    float: left;
+    display: block;
+    width: 15vw;
+    height: 15vw;
+    position: relative;
+    top: -6vw;
+    left: 18vw;
+    border-radius: 1.2vw;
+    background-color: black;
+    border: 0.3vw solid #91837f; }
+    body .profile_pic img {
+      position: absolute;
+      max-width: 15vw;
+      max-height: 15vw;
+      display: table-cell;
+      top: 50%;
+      left: 50%;
+      margin: auto;
+      transform: translate(-50%, -50%); }
+  body .name {
+    position: relative;
+    left: 20vw;
+    width: 80vw;
+    font-weight: bold;
+    font-size: 150%; }
+  body .info {
+    background-color: white;
+    border: 2px solid #91837f;
+    width: 80vw;
+    height: auto;
+    margin: 2vw auto;
+    border-radius: 1.2vw; }
+    body .info .brief-info {
+      margin-top: 8vw;
+      text-align: center;
+      font-size: 150%; }
+    body .info .more-info div {
+      height: auto;
+      display: inline-block; }
+      body .info .more-info div .sub-title {
+        width: 16vw;
+        vertical-align: top;
+        margin-left: 6vw;
+        margin-right: 4vw;
+        font-size: 130%; }
+      body .info .more-info div .desc {
+        right: 15vw;
+        width: 48vw;
+        margin-bottom: 10vw; }
+      body .info .more-info div .divider2 {
+        display: block;
+        margin: 0.6vw 20vw 0.6vw 0;
+        border-top: 0.15vw solid #91837f;
+        content: ""; }
+    body .info .more-info .social-network img {
+      display: inline;
+      width: 2.5vw;
+      height: 2.5vw;
+      margin: 0.4vw;
+      margin-top: 0; }
+    body .info .more-info .images .image {
+      position: relative;
+      display: inline-block;
+      width: 14vw;
+      margin: 1vw 1vw 0 0; }
+      body .info .more-info .images .image .border {
+        position: relative;
+        width: 14vw;
+        height: 14vw;
+        background-color: black;
+        border-radius: 5%; }
+        body .info .more-info .images .image .border img {
+          position: absolute;
+          max-width: 14vw;
+          max-height: 14vw;
+          display: table-cell;
+          width: 14vw;
+          top: 50%;
+          left: 50%;
+          margin: auto;
+          transform: translate(-50%, -50%); }
+  body .divider1 {
+    display: block;
+    width: auto;
+    margin: 4vw 12vw;
+    border-top: 0.24vw solid #91837f;
+    content: ""; }
+
+@media only screen and (max-width: 1080px) and (min-width: 720px) {
+  body .cover {
+    width: 88vw;
+    height: 44vw; }
+    body .cover img {
+      max-width: 88vw;
+      max-height: 88vw;
+      width: 88vw; }
+  body .profile_pic {
+    width: 16.5vw;
+    height: 16.5vw; }
+    body .profile_pic img {
+      max-width: 16.5vw;
+      max-height: 16.5vw; }
+  body .info {
+    width: 88vw; }
+    body .info .more-info div .desc {
+      width: 56vw; }
+    body .info .more-info .social-network img {
+      width: 3.75vw;
+      height: 3.75vw; }
+    body .info .more-info .images .image {
+      width: 16.8vw; }
+      body .info .more-info .images .image .border {
+        width: 16.8vw;
+        height: 16.8vw; }
+        body .info .more-info .images .image .border img {
+          max-width: 16.8vw;
+          max-height: 16.8vw;
+          width: 16.8vw; } }
+@media only screen and (max-width: 720px) {
+  body .cover {
+    width: 88vw;
+    height: 44vw; }
+    body .cover img {
+      max-width: 88vw;
+      max-height: 88vw;
+      width: 88vw; }
+  body .profile_pic {
+    width: 16.5vw;
+    height: 16.5vw; }
+    body .profile_pic img {
+      max-width: 16.5vw;
+      max-height: 16.5vw; }
+  body .info {
+    width: 88vw; }
+    body .info .more-info div .sub-title {
+      font-weight: bold; }
+    body .info .more-info div .desc {
+      font-size: 90%;
+      width: 56vw; }
+    body .info .more-info .social-network img {
+      width: 4.5vw;
+      height: 4.5vw; }
+    body .info .more-info .images .image {
+      width: 16.8vw; }
+      body .info .more-info .images .image .border {
+        width: 16.8vw;
+        height: 16.8vw; }
+        body .info .more-info .images .image .border img {
+          max-width: 16.8vw;
+          max-height: 16.8vw;
+          width: 16.8vw; } }
+
+/*# sourceMappingURL=profile.css.map */

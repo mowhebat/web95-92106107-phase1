@@ -1,0 +1,175 @@
+body {
+  font: 100% "Comic Sans MS", cursive, sans-serif;
+  background-color: #bcaeaa; }
+  body #blog-name {
+    text-align: center;
+    font-size: 300%;
+    font-weight: bold;
+    color: #632532;
+    border-bottom: dashed #632532;
+    width: 50vw;
+    margin: 3vw auto;
+    padding-bottom: 2vw; }
+  body br {
+    display: block;
+    margin: 2vw 0; }
+  body #post {
+    position: relative;
+    display: table;
+    margin: auto; }
+    body #post .image {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      background-color: black; }
+      body #post .image img {
+        position: absolute;
+        max-width: 50vw;
+        max-height: 50vw;
+        display: table-cell;
+        top: 50%;
+        left: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%); }
+    body #post .desc {
+      width: 46vw;
+      height: 31.28vw;
+      background-color: whitesmoke;
+      position: absolute;
+      top: 50vw;
+      padding: 2vw; }
+      body #post .desc .first-info .author-pic {
+        width: 10vw;
+        height: 10vw;
+        display: inline-block;
+        position: relative;
+        background-color: black;
+        border-radius: 50%;
+        margin: 0 1vw;
+        overflow: hidden;
+        border: 0.15vw solid black; }
+        body #post .desc .first-info .author-pic img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: auto;
+          transform: translate(-50%, -50%);
+          max-width: 10vw;
+          max-height: 10vw; }
+      body #post .desc .first-info .author-name {
+        font-size: 115%;
+        position: absolute;
+        height: 10vw;
+        line-height: 10vw;
+        display: inline-block;
+        direction: ltr; }
+      body #post .desc .first-info .date {
+        font-size: 85%;
+        position: absolute;
+        height: 10vw;
+        line-height: 10vw;
+        display: inline-block;
+        right: 2vw;
+        direction: ltr; }
+      body #post .desc .info-divider {
+        position: absolute;
+        top: 12vw;
+        display: block;
+        width: 46vw;
+        height: 5px;
+        border: 0;
+        border-top: 1px solid slategray;
+        margin: 1vw 0;
+        padding: 0;
+        content: ""; }
+      body #post .desc .more-info {
+        position: absolute;
+        top: 16vw; }
+        body #post .desc .more-info .title {
+          height: 5vw;
+          line-height: 5vw;
+          font-weight: bold; }
+        body #post .desc .more-info .info {
+          height: 6vw; }
+          body #post .desc .more-info .info .container {
+            position: relative;
+            height: auto;
+            display: table;
+            right: 2vw; }
+          body #post .desc .more-info .info [type="checkbox"] {
+            position: absolute;
+            left: -9999px; }
+          body #post .desc .more-info .info label {
+            background: #cccfcc;
+            display: block;
+            width: 10vw;
+            height: 2.5vw;
+            cursor: pointer;
+            position: absolute;
+            top: 2vw;
+            border-radius: 10%;
+            left: 2vw; }
+          body #post .desc .more-info .info label:hover {
+            background-color: #b7b6b3; }
+          body #post .desc .more-info .info label:before {
+            position: absolute;
+            content: "load more...";
+            line-height: 2.5vw;
+            vertical-align: middle;
+            font-size: 11px;
+            right: 2vw;
+            color: #707070;
+            font-weight: bold; }
+          body #post .desc .more-info .info [type="checkbox"] ~ dl {
+            display: none; }
+          body #post .desc .more-info .info [type="checkbox"]:checked ~ dl {
+            width: 46vw;
+            height: 23vw;
+            background-color: whitesmoke;
+            position: absolute;
+            padding: 0 2vw;
+            display: block; }
+          body #post .desc .more-info .info [type="checkbox"]:checked + label {
+            display: none; }
+
+@media only screen and (max-width: 1080px) {
+  body #blog-name {
+    font-size: 500%;
+    text-align: center;
+    width: 70vw; }
+  body #post {
+    font-size: 120%; }
+    body #post .image {
+      width: 70vw;
+      height: 70vw; }
+      body #post .image img {
+        max-width: 70vw;
+        max-height: 70vw; }
+    body #post .desc {
+      width: 66vw;
+      height: 33vw;
+      top: 70vw; }
+      body #post .desc .info-divider {
+        width: 66vw; }
+      body #post .desc .more-info .info {
+        height: 6vw; }
+        body #post .desc .more-info .info label:before {
+          font-size: 70%; }
+        body #post .desc .more-info .info [type="checkbox"]:checked ~ dl {
+          width: 66vw;
+          height: 33vw; } }
+@media only screen and (max-width: 720px) {
+  body {
+    font-size: 80%; }
+    body #blog-name {
+      font-size: 400%;
+      width: 75vw; }
+    body #post .desc {
+      height: 35.88vw; }
+      body #post .desc .more-info .info .container label {
+        width: 13vw;
+        height: 3.25vw; }
+      body #post .desc .more-info .info .container label:before {
+        font-size: 80%; } }
+
+/*# sourceMappingURL=singlePost.css.map */

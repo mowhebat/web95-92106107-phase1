@@ -1,0 +1,289 @@
+$font-stack:    "Comic Sans MS", cursive, sans-serif;
+$primary-color: #ffffff;
+$photo-size: 30vw;
+$padding-size: 1.2vw;
+$margin-size: 0.6vw;
+$profile-size: 3vw;
+$button-size: 2.4vw;
+
+body {
+  font: 80% $font-stack;
+  background-color: #bcaeaa;
+
+  #blog-name {
+    font-size: 300%;
+    font-weight: bold;
+    color: #632532;
+    position: relative;
+    left: 5 * $margin-size;
+    border-bottom: dashed #632532;
+    width: 88vw;
+    padding: 2 * $padding-size;
+    margin-bottom: 5 * $margin-size;
+  }
+
+  br {
+    display: block;
+    margin: $padding-size 0;
+  }
+
+  #container {
+    display: table;
+    margin: auto;
+    width: 95%;
+
+    .post {
+
+      display: inline-block;
+      height: 1.25 * $photo-size;
+      margin: 3*$margin-size 0;
+      position: relative;
+
+      .image {
+        position: relative;
+        margin: $margin-size;
+        width: $photo-size;
+        height: $photo-size;
+        background-color: black;
+
+        img {
+          position: absolute;
+          max-width: $photo-size;
+          max-height: $photo-size;
+          display: table-cell;
+          top: 50%;
+          left: 50%;
+          margin: auto;
+          transform: translate(-50%, -50%)
+        }
+      }
+
+      .desc {
+
+        width: $photo-size - 2 * $padding-size;
+        height: ($photo-size - 2 * $padding-size) / 4;
+        background-color: whitesmoke;
+        position: absolute;
+        top: $photo-size;
+        padding: $padding-size;
+        margin: $margin-size;
+
+        .first-info {
+
+          .author-pic {
+            width: $profile-size;
+            height: $profile-size;
+            display: inline-block;
+            position: relative;
+            background-color: black;
+            border-radius: 50%;
+            margin: 0 $margin-size;
+            overflow: hidden;
+            border: 1vw ;
+
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin: auto;
+              transform: translate(-50%, -50%);
+              max-width: $profile-size;
+              max-height: $profile-size;
+            }
+          }
+
+          .author-name {
+            position: absolute;
+            height: $profile-size;
+            line-height: $profile-size;
+            display: inline-block;
+            direction: ltr;
+          }
+
+          .date {
+            position: absolute;
+            height: $profile-size;
+            line-height: $profile-size;
+            display: inline-block;
+            right: $padding-size;
+            direction: ltr;
+          }
+        }
+
+        .info-divider {
+          position: absolute;
+          top: $profile-size + $padding-size;
+          display: block;
+          width: $photo-size - 2 * $padding-size;
+          height: 5px;
+          border: 0;
+          border-top: 1px solid slategray;
+          margin: $margin-size 0;
+          padding: 0;
+          content: "";
+        }
+
+        .more-info {
+
+          position: absolute;
+          top: $profile-size + $padding-size + 2 * $margin-size;
+
+          .title {
+            font-size: 130%;
+            height: $profile-size;
+            line-height: $profile-size;
+            font-weight: bold;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 720px)
+{
+  body {
+    $photo-size: 28vw;
+
+    #blog-name {
+      font-size: 500%;
+      text-align: center;
+
+    }
+    #container {
+
+      .post {
+        height: 9*$photo-size/4;
+        margin: 4*$margin-size 2*$margin-size;
+
+        .image {
+          margin: 1.1*$margin-size;
+          width: 1.5*$photo-size;
+          height: 1.5*$photo-size;
+
+          img {
+            max-width: 1.5*$photo-size;
+            max-height: 1.5*$photo-size;
+          }
+        }
+
+        .desc {
+          width: 1.5*$photo-size - 2*$padding-size;
+          height: (3*$photo-size - 2*$padding-size) / 4;
+          top: 1.5*$photo-size;
+          padding: $padding-size;
+          margin: 1.1*$margin-size;
+
+          .first-info {
+
+            .author-pic {
+              width: 3*$profile-size;
+              height: 3*$profile-size;
+
+              img {
+                max-width: 3*$profile-size;
+                max-height: 3*$profile-size;
+              }
+            }
+
+            .author-name {
+              top: -$profile-size;
+              right: -$padding-size;
+              position: relative;
+              direction: ltr;
+              font-size: 135%;
+            }
+
+            .date {
+              font-size: 120%;
+              position: relative;
+              vertical-align: middle;
+              left: 0.85*$photo-size;
+            }
+          }
+          .more-info {
+            font-size: 150%;
+            top: 4.7*$profile-size + $padding-size + 2 * $margin-size;
+          }
+          .info-divider {
+            width: 1.5*$photo-size - 2 * $padding-size;
+            top: 4*$profile-size + $padding-size;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  body {
+    $photo-size: 28vw;
+
+    #container {
+
+      .post {
+        height: 9*$photo-size/4;
+        margin: 4*$margin-size 2*$margin-size;
+
+        .image {
+          margin: 1.1*$margin-size;
+          width: 1.5*$photo-size;
+          height: 1.5*$photo-size;
+
+          img {
+            max-width: 1.5*$photo-size;
+            max-height: 1.5*$photo-size;
+          }
+        }
+
+        .desc {
+          width: 1.5*$photo-size - 2*$padding-size;
+          height: (3*$photo-size - 2*$padding-size) / 4;
+          top: 1.5*$photo-size;
+          padding: $padding-size;
+          margin: 1.1*$margin-size;
+
+          .first-info {
+
+            .author-pic {
+              width: 3*$profile-size;
+              height: 3*$profile-size;
+
+              img {
+                max-width: 3*$profile-size;
+                max-height: 3*$profile-size;
+              }
+            }
+
+            .author-name {
+              top: -$profile-size;
+              right: -$padding-size;
+              position: relative;
+              direction: ltr;
+              font-size: 125%;
+            }
+
+            .date {
+              position: relative;
+              vertical-align: middle;
+              right: -0.75*$photo-size;
+            }
+          }
+          .more-info {
+            font-size: 140%;
+            top: 4.7*$profile-size + $padding-size + 2 * $margin-size;
+          }
+          .info-divider {
+            width: 1.5*$photo-size - 2 * $padding-size;
+            top: 4*$profile-size + $padding-size;
+          }
+        }
+      }
+    }
+
+  }
+
+}
