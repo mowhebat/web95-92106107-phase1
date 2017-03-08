@@ -1,11 +1,6 @@
 body {
-  font: 150% "Comic Sans MS", cursive, sans-serif;
+  font: 100% "Comic Sans MS", cursive, sans-serif;
   background-color: #bcaeaa;
   color: #6e6360; }
-  body div {
-    margin: 5%; }
-    body div a {
-      display: inline-block;
-      text-decoration: none; }
 
 /*# sourceMappingURL=index.css.map */
